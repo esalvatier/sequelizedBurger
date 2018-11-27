@@ -3,13 +3,17 @@ module.exports = function (sequelize, DataTypes) {
     burger_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: [1, 255]
+      validate: {
+        len: [1, 255]
+      }
     },
     devoured: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false
     }
+  }, {
+    timestamps: false
   });
   return Burger;
 };

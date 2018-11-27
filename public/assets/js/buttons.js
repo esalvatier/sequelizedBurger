@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   $(".devour").on("click", function (event) {
     //captures id and new state
     var id = $(this).data("id");
@@ -25,7 +25,7 @@ $(function() {
 
     //create object to pass into post request
     var newBurger = {
-      name: $("#burger").val().trim(),
+      burger_name: $("#burger").val().trim(),
     };
 
     $.ajax("/api/burgers", {
